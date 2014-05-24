@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: /\A\S+@\S+\z/
   validates :email, uniqueness: {case_sensitive: false}
   validates :password, length: {minimum: 8, allow_blank: true}
-  validates :username, uniqueness: {case_sensitive: false}, format: /\A[A-Z0-9]+\z/i
+  validates :username, uniqueness: {case_sensitive: false}, presence: true, format: /\A[A-Z0-9]+\z/i
 
   scope :by_name, -> { order(:name) }
   scope :non_admin, -> { by_name.where(admin: false) }
