@@ -108,25 +108,25 @@ User.create!([
                  {
                      name: "Roger Ebert",
                      email: "roger@example.com",
-                     password: "secret",
+                     password: "secret123",
                      password_confirmation: "secret"
                  },
                  {
                      name: "Gene Siskel",
                      email: "gene@example.com",
-                     password: "secret",
+                     password: "secret123",
                      password_confirmation: "secret"
                  },
                  {
                      name: "Peter Travers",
                      email: "peter@example.com",
-                     password: "secret",
+                     password: "secret123",
                      password_confirmation: "secret"
                  },
                  {
                      name: "Elvis Mitchell",
                      email: "elvis@example.com",
-                     password: "secret",
+                     password: "secret123",
                      password_confirmation: "secret"
                  }
              ])
