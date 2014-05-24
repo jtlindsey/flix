@@ -1,0 +1,19 @@
+<header id="page-header">
+  <div id="masthead">
+    <h1><%= link_to 'Flix', root_path %></h1>
+    <nav>
+      <p>
+        <% if current_user %>
+            <strong><%= "Hello" %></strong>
+            <%= link_to current_user.name, current_user %> |
+            <%= link_to 'Account Settings', edit_user_path(current_user) %>
+            <%= link_to 'Sign out', session_path, method: :delete, class: 'button' %>
+        <% else %>
+            <%= link_to 'Sign up', signup_path, class: 'button' %>
+            <%= link_to 'Sign In', signin_path, class: 'button' %>
+        <% end %>
+      </p>
+    </nav>
+  </div>
+
+</header>

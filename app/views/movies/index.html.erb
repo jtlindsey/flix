@@ -1,0 +1,36 @@
+<ul id="movies">
+  <% @movies.each do |movie| %>
+    <li>
+      <article class="movie">
+        <header>
+          <%= image_for(movie) %>
+          <h2><%= link_to movie.title, movie_path(movie) %> (<%= movie.released_on.year %>)</h2>
+          <h3><%= movie.cast %></h3>
+        </header>
+        <p>
+          <%= truncate(movie.description, length: 150, separator: ' ') %>
+        </p>
+        <table>
+          <tr>
+            <th>Rating</th>
+            <td><%= movie.rating %></td>
+          </tr>
+          <tr>
+            <th>Average Review</th>
+            <td><%= format_average_stars(movie) %></td>
+          </tr>
+          <tr>
+            <th>Duration</th>
+            <td><%= movie.duration %></td>
+          </tr>
+          <tr>
+            <th>Total Gross</th>
+            <td><%= format_total_gross(movie) %></td>
+          </tr>
+        </table>
+        <footer>
+        </footer>
+      </article>
+    </li>
+  <% end %>
+</ul>

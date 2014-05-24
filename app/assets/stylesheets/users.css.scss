@@ -1,0 +1,59 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+
+ul#users {
+  font-size: 1.15em;
+  list-style: none;
+  padding: 0;
+
+  li {
+    margin: 1em 0;
+  }
+}
+
+article#user {
+  p {
+    padding: .5em 0;
+    font-size: 1.15em;
+    line-height: 1.25em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 100%;
+    color: $secondary-text-color;
+  }
+
+  h3 {
+    padding-bottom: .5em;
+    margin: 1em 0;
+    font-size: 120%;
+    border-bottom: 1px solid $subdued-color;
+
+    &.no-rule {
+      border: none;
+    }
+  }
+
+  img {
+    float: left;
+    margin-right: 20px;
+    border: 3px solid $subdued-color;
+  }
+
+  header {
+    margin-bottom: 3em;
+  }
+
+  footer {
+    margin: 2em 0;
+    text-align: center;
+
+    nav {
+      margin-top: 2em;
+    }
+  }
+}

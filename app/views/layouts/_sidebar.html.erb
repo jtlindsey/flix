@@ -1,0 +1,28 @@
+<aside id="sidebar">
+  <nav>
+    <ul>
+      <% a = Movie.all %>
+      <li class="all-movies">
+        <%= link_to "All Movies (#{a.count})", movies_path, class: 'button' %>
+      </li>
+      <li class="all-movies">
+        <%= link_to "Hits (#{a.hits.count})", filtered_movies_path(:hits), class: 'button' %>
+      </li>
+      <li class="all-movies">
+        <%= link_to "Flops (#{a.flops.count})", filtered_movies_path(:flops), class: 'button' %>
+      </li>
+      <li class="all-movies">
+        <%= link_to "Recent (#{a.recent.count})", filtered_movies_path(:recent), class: 'button' %>
+      </li>
+      <li class="all-movies">
+        <%= link_to "Upcoming (#{a.upcoming.count})", filtered_movies_path(:upcoming), class: 'button' %>
+      </li>
+      <% if current_user_admin? %>
+      <li class="create-movie">
+        <%= link_to 'Add New Movie', new_movie_path, class: 'button' %>
+      </li>
+      <% end %>
+    </ul>
+  </nav>
+  <%= content_for(:side) %>
+</aside>
